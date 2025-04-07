@@ -7,7 +7,7 @@ using Bussiness_Logic_Layer.models;
 
 namespace accesslayaer.repostory
 {
-    internal class Class1 : Interface1
+    public class Class1 : Interface1
 
     {
         public int add(department entity)

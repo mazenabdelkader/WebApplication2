@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Bussiness_Logic_Layer.data
 {
-    internal class configurtion : IEntityTypeConfiguration<department>
+    public class configurtion : IEntityTypeConfiguration<department>
     {
         public void Configure(EntityTypeBuilder<department> builder)
         {

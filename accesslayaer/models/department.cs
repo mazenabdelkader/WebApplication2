@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bussiness_Logic_Layer.models
 {
-    internal class department:BaseEntity
+    public class department:BaseEntity
     {
         public string Name { get; set; }    
         public string Description { get; set; } 

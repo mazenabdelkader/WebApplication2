@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace accesslayaer.data
 {
-    internal class dbcontext:DbContext
+    public class dbcontext:DbContext
 
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,3 +1,7 @@
+using accesslayaer;
+using Bussiness_Logic_Layer;
+using Bussiness_Logic_Layer.models;
+
 namespace WebApplication2
 {
     public class Program
@@ -8,6 +12,8 @@ namespace WebApplication2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+          
+
 
             var app = builder.Build();
 
