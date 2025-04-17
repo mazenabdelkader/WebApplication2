@@ -1,6 +1,9 @@
 using accesslayaer;
+using accesslayaer.data;
+using accesslayaer.repostory;
 using Bussiness_Logic_Layer;
 using Bussiness_Logic_Layer.models;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication2
 {
@@ -12,7 +15,13 @@ namespace WebApplication2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-          
+            builder.Services.AddScoped<departmentrepository>();
+            builder.Services.AddDbContext<dbcontext>(options =>
+            {
+                options.UseSqlServer("server=.;database=Mazen;trusted_connection=true;");
+
+
+            });
 
 
             var app = builder.Build();
