@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using accesslayaer.models.employee;
+using accesslayaer.models.enums;
 
-namespace Bussiness_Logic_Layer
+namespace Bussiness_Logic_Layer.dtos.employee
 {
     public class createdemployeedto
     {
@@ -31,6 +32,7 @@ namespace Bussiness_Logic_Layer
         [Display(Name = "Hiring Date")]
         public DateOnly HiringDate { get; set; }
         public gender Gender { get; set; }
+
         public string EmployeeType { get; set; }
     }
 }

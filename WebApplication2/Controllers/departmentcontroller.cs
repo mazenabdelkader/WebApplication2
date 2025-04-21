@@ -1,9 +1,9 @@
-﻿using Bussiness_Logic_Layer;
+﻿using Bussiness_Logic_Layer.services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PL
+namespace PL.Controllers
 {
-    public class departmentcontroller:Controller
+    public class departmentcontroller : Controller
 
     {
         private readonly departmentservice _departmentservice;
@@ -12,14 +12,14 @@ namespace PL
         {
             _departmentservice = departmentservice;
         }
-        public IActionResult index() 
-        { 
-        return View();
-        
+        public IActionResult index()
+        {
+            return View();
+
         }
         public IActionResult create()
         {
-            return View();  
+            return View();
         }
 
         public IActionResult delete()

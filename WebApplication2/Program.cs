@@ -1,8 +1,11 @@
+using System.Configuration;
 using accesslayaer;
 using accesslayaer.data;
 using accesslayaer.repostory;
 using Bussiness_Logic_Layer;
 using Bussiness_Logic_Layer.models;
+using Bussiness_Logic_Layer.services;
+using Demo.Buisness.Services.Departments;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication2
@@ -15,13 +18,23 @@ namespace WebApplication2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<departmentrepository>();
-            builder.Services.AddDbContext<dbcontext>(options =>
+            builder.Services.AddDbContext<dbcontext>(Options =>
             {
-                options.UseSqlServer("server=.;database=Mazen;trusted_connection=true;");
+                Options
+                .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            }
+            );
 
 
-            });
+            builder.Services.AddScoped<idepartmentrepository, departmentrepository>();  // allow dependency injection for IDepartmentRepository
+
+
+          
+
+           builder.Services.AddScoped<iemployeerepository, employeerepository>(); // allow dependency injection for IEmployeeRepository
+
+            builder.Services.AddScoped<iemployeeservice, employeeservice>();
+
 
 
             var app = builder.Build();

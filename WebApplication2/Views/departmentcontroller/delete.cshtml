@@ -1,7 +1,9 @@
-﻿
+﻿@using Demo.Buisness.DataTransferObject.Departments
+@model DepartmentDetailsDto
 @{
-    ViewData["Title"] = "delete";
+    ViewData["Title"] = "Delete";
 }
+<h1 class="my-5 m-auto">Delete @Model.Name Department</h1>
 
-<h1>delete</h1>
+<partial name="_ValidationScriptsPartial" />
 

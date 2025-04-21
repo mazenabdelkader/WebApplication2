@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace accesslayaer.models.empolyee
+namespace accesslayaer.models.enums
 {
-    public enum employee
+    public enum gender
     {
-        fulltime=1,
-        parttime=2
+        Male = 1,
+        Femal = 2
     }
 }
