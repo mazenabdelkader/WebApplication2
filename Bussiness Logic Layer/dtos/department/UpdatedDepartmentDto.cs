@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Buisness.DataTransferObject.Departments
+namespace Bussiness_Logic_Layer.dtos.department
 {
-    public class UpdatedDepartmentDto
+    internal class UpdatedDepartmentDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -14,9 +14,6 @@ namespace Demo.Buisness.DataTransferObject.Departments
         public string? Description { get; set; } = string.Empty;
 
         public DateOnly DateOfCreation { get; set; }
-
-
-
 
 
     }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using accesslayaer.models.departmentmodule;
 using Bussiness_Logic_Layer.models;
 
-namespace accesslayaer.repostory
+namespace accesslayaer.repostory.interfaces
 {
-    public interface Igenericrepository<T> where T:BaseEntity
+    public interface Igenericrepository<T> where T : BaseEntity
     {
         IEnumerable<T> getall(bool withtracking = false);
         T getbyid(int id);

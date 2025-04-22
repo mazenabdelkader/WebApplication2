@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using accesslayaer;
+using accesslayaer.repostory.interfaces;
 using Bussiness_Logic_Layer.dtos.department;
 using Bussiness_Logic_Layer.models;
 

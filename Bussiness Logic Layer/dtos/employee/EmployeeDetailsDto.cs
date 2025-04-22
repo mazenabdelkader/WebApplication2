@@ -1,14 +1,12 @@
-﻿using Demo.DataAcess.Entities.Common.Enums;
-using Microsoft.AspNetCore.Http;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Buisness.DataTransferObject.Employees
+namespace Bussiness_Logic_Layer.dtos.employee
 {
-   public class EmployeeDetailsDto
+    internal class EmployeeDetailsDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
@@ -21,14 +19,12 @@ namespace Demo.Buisness.DataTransferObject.Employees
         public DateOnly HiringDate { get; set; }
         public string Gender { get; set; }
         public string EmployeeType { get; set; }
-        public int CreatedBy { get; set; } 
-        public DateTime CreatedOn { get; set; } 
-        public int LastModifiedBy { get; set; } 
+        public int CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public int LastModifiedBy { get; set; }
         public DateTime LastModifiedOn { get; set; }
 
         public string? Department { get; set; }
         public string? Image { get; set; }
-
-
     }
 }

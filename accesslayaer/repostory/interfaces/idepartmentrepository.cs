@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bussiness_Logic_Layer.models;
+using accesslayaer.models.departmentmodule;
 
-namespace accesslayaer
+namespace accesslayaer.repostory.interfaces
 {
     public interface idepartmentrepository
     {
-        IEnumerable<department> getall(bool withtracking=false);
+        IEnumerable<department> getall(bool withtracking = false);
         department getbyid(int id);
         int update(department department);
         int delete(department department);

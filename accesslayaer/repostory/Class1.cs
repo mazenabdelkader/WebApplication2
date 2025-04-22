@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bussiness_Logic_Layer.models;
+using accesslayaer.models.departmentmodule;
+using accesslayaer.repostory.interfaces;
 
 namespace accesslayaer.repostory
 {
-    public class Class1 : Interface1
+    public class Class1 : IDepartmentRepository
 
     {
         public int add(department entity)

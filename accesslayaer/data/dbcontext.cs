@@ -4,8 +4,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using accesslayaer.models.departmentmodule;
 using accesslayaer.models.employee;
-using Bussiness_Logic_Layer.models;
 using Microsoft.EntityFrameworkCore;
 
 namespace accesslayaer.data
@@ -13,7 +13,10 @@ namespace accesslayaer.data
     public class dbcontext:DbContext
 
     {
+        public  dbcontext(DbContextOptions<dbcontext> options ) : base(options)
+        {
 
+        }   
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer("server=.;database=Mazen;trusted_connection=true;");

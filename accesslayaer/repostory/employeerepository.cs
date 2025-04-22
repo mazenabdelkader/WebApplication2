@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using accesslayaer.data;
 using accesslayaer.models.employee;
+using accesslayaer.repostory.interfaces;
 using Bussiness_Logic_Layer.models;
 
 namespace accesslayaer.repostory

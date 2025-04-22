@@ -9,7 +9,7 @@ using accesslayaer.models.enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace accesslayaer.data
+namespace accesslayaer.data.Configuration
 {
     public class employeeconfiguration : IEntityTypeConfiguration<employee>
     {
@@ -19,11 +19,11 @@ namespace accesslayaer.data
             builder.Property(p => p.Name).HasColumnType("varchar(50)");
             builder.Property(p => p.Address).HasColumnType("varchar(50)");
             builder.Property(p => p.Salary).HasColumnType("decimal(10,2)");
-           // builder.Property(p => p.Gender)
-           //.HasConversion(
-           // empgender => empgender.ToString(),
-           // (returned) => (gender)Enum.Parse(typeof(gender), returned)
-           // );
+            // builder.Property(p => p.Gender)
+            //.HasConversion(
+            // empgender => empgender.ToString(),
+            // (returned) => (gender)Enum.Parse(typeof(gender), returned)
+            // );
 
         }
     }

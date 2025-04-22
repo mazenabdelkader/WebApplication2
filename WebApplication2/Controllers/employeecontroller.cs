@@ -1,8 +1,10 @@
 ﻿using accesslayaer.models.employee;
+using accesslayaer.models.enums;
 using accesslayaer.repostory;
 using Bussiness_Logic_Layer.dtos.employee;
 using Bussiness_Logic_Layer.services;
 using Microsoft.AspNetCore.Mvc;
+using PL.Models;
 
 namespace PL.Controllers
 {
@@ -40,12 +42,12 @@ namespace PL.Controllers
 
             if (!id.HasValue) return BadRequest();
 
-            var employee = iemployeeservice.getall(id.HasValue);
+            var employee = iemployeeservice.getbyid(id.Value);
             if (employee is null) return NotFound();
-            var employeeViewModel = new employee()
+            var employeeViewModel = new EmployeeModel()
             {
 
-                Name = employee.name,
+                Name = employee.Name,
                 Age = employee.Age,
                 Address = employee.Address,
                 Email = employee.Email,

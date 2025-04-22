@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using accesslayaer.models.employee;
 using Bussiness_Logic_Layer.models;
 
-namespace accesslayaer.repostory
+namespace accesslayaer.repostory.interfaces
 {
     public interface iemployeerepository
     {

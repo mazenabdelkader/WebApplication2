@@ -7,14 +7,14 @@ using accesslayaer.models.departmentmodule;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace accesslayaer.data
+namespace accesslayaer.data.Configuration
 {
-    public class Baseentityconfiguration<T> : IEntityTypeConfiguration<T> where  T : BaseEntity
+    public class BaseEntityConfiguration<T> : IEntityTypeConfiguration<T> where T : BaseEntity
 
     {
         public void Configure(EntityTypeBuilder<T> builder)
         {
-            
+
         }
     }
 }
